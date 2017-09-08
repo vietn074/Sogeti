@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BarcodePOC"
+             x:Class="BarcodePOC.MainPage">
+
+   
+
+    <RelativeLayout Padding="0,20,0,0">
+    <Image Source="vallourec.png" Opacity="0.75"
+                RelativeLayout.WidthConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+               Margin="5,5,5,5"/>
+    <Grid 
+
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+
+            <Label x:Name="lblHeader" Text="Barcode Result:" FontSize="20" HorizontalOptions="Start"
+                    Margin="100"/>
+            <Label Text="{Binding MainPage.BarCodeResult}" FontSize="20" HorizontalOptions="Start"
+                    Margin="130"/>
+
+        <Button Text="Scan Barcode"
+        HorizontalOptions="Center"
+        VerticalOptions="End"
+        Clicked="OnScanRequest"/> 
+        </Grid>
+
+  </RelativeLayout>
+     
+
+
+</ContentPage>
